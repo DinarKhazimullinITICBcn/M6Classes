@@ -1,0 +1,114 @@
+/*Trec el margin, canviu el color de fons per un blau i el tipus de lletra*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #8fbef0;
+    color: #333; 
+    font-family: Arial, sans-serif; 
+}
+/*Faig que el contenidor de seccio sigui un flex anb un bordre de 2px blau amb vores de 15px, 20px de marge i padding i color blau de fons*/
+#seccio {
+    display: flex;
+    border: 2px solid #3399ff;
+    border-radius: 15px;
+    background-color: #d4f8ff;
+    padding: 20px;
+    margin: 20px;
+}
+/*Aixo es per a que despres pugui pusar bordres al divs de buttons sense tenir que tocar buttons ja que els divs de buttons agafen tot el espai. Aixi, faig que buttons sigui de 20
+viewwidth mentre que la mitjana 50, aixi segueix separat en la mitat. Sense aquest div, tot no estaria separat per la mitad.*/
+#mitjana {
+    width: 50vw;
+}
+/*Un flex column amb 10px de distancia y 15 de padding.*/
+#buttons {
+    width: 10vw;
+    padding: 15px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+/*Els divs de dins son flex column amb padding de 10px al bottom*/
+#buttons div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+/*Tots els divs menys l'ultim tenen una vora de color purpura*/
+#buttons div:not(:last-child) {
+    border-bottom: 1px solid #9933ff;
+}
+/*Els inputs de tipus number i text tenen cert padding, vores, esquines redondes i fons blanc*/
+input[type="number"], input[type="text"] {
+    padding: 5px;
+    border: 1px solid #3399ff; 
+    border-radius: 5px;
+    background-color: #fff; 
+}
+/*El input te una mida maxima especifica.*/
+#buttons div input {
+    max-width: 10vw;
+    margin-bottom: 1vh;
+}
+/*Els buttons tenen una transicio per a que quan fem un hover no sigui instantani, ademes de tenir una mida especifica igual als inputs (almenys en una resolucio de 1920x1080)*/
+#buttons div button{
+    max-width: 10.4vw;
+    background-color: #9933ff; 
+    color: #fff; 
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease
+}
+/*Quan pasem el ratoli per sobre canvia de color a mes oscur*/
+#buttons div button:hover {
+    background-color: #6600cc; 
+}
+/*Afegir una vore a dalt*/
+#editarInputs {
+    margin-top: 1vh
+}
+/*Fa que el div de la informacio sigui a la dreta amb una mida determinada*/
+#testDiv {
+    float: right;
+    width: 50vw;
+    height: 80vh;
+}
+/*els dos contenidors tenen un radi de 15px de esquina*/
+#buttons, #testDiv {
+    border-radius: 15px;
+}
+/*La taula no te cap vore, i ocupa el 100% del div*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+/*Canviem el color del head de la taula*/
+thead {
+    background-color: #9933ff;
+}
+/*Les dos tenen un padding de 10px i centrat*/
+th, td {
+    padding: 10px;
+    text-align: center; 
+}
+/*Com no es pot posar vores redondes, has de agafar el primer i ultim element i fer-ho en aquests*/
+th:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+th:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+/*Fa que el color sempre sigui blanc*/
+th {
+    color: white;
+}
+/*El color de fons de les files que siguin parella es gris*/
+tr:nth-child(even) {
+    background-color: #f0f8ff;
+}
